@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 
 // React Native Components
 import { View, Text, StyleSheet } from 'react-native';
+import { Card } from 'react-native-ui-lib';
 
 // Expo
 import { StatusBar } from "expo-status-bar";
