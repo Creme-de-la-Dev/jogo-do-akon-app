@@ -3,7 +3,6 @@ import React, { useContext } from "react";
 
 // React Native Components
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-// import { Card, CardProps } from "react-native-ui-lib";
 import { Card, Button, Icon } from "@rneui/themed";
 
 // Expo
