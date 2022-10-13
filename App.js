@@ -16,6 +16,7 @@ import BottomNavigator from "./src/navigator/BottomNavigator";
 import HomeScreen from "./app/screens/HomeScreen";
 import PlayScreen from "./app/screens/PlayScreen";
 import ProfileScreen from "./app/screens/ProfileScreen";
+import LoginScreen from "./app/screens/LoginScreen";
 
 export default function App() {
   // Stack Navigation
@@ -23,7 +24,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Login">
         <Stack.Screen
           name="BottomNavigator"
           component={BottomNavigator}
@@ -69,6 +70,17 @@ export default function App() {
             animationEnabled: false,
             headerTitle: "Perfil",
             headerShown: true,
+            headerStyle: {
+              backgroundColor: "#fbd276",
+            },
+          }}
+        />
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{
+            headerShown: false,
+            animationEnabled: false,
             headerStyle: {
               backgroundColor: "#fbd276",
             },
