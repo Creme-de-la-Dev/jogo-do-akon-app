@@ -10,6 +10,7 @@ import { StatusBar } from "expo-status-bar";
 
 // Images
 const GameplayImage = require("../../assets/gameplay.png");
+const ProVersionImage = require("../../assets/pro.jpeg");
 
 export default HomeScreen = () => {
   return (
@@ -48,6 +49,36 @@ export default HomeScreen = () => {
             }
             buttonStyle={styles.cardButton}
             title="Aprender as Regras"
+            titleStyle={{ fontWeight: "bold" }}
+          />
+        </Card>
+        <Card
+          containerStyle={{
+            borderRadius: 10,
+            borderColor: "#fbd276",
+            borderWidth: 2,
+            marginBottom: 100,
+          }}
+        >
+          <Card.Title style={styles.cardTitle}>Versão PRO</Card.Title>
+          <Card.Divider />
+          <Card.Image
+            style={{ padding: 0, borderRadius: 10, resizeMode: "stretch"}}
+            source={ProVersionImage}
+          />
+          <Text style={styles.cardText}>
+            Adiquira a Versão PRO por apenas R$ 2,99 e desbloqueie novas formas de jogar!
+          </Text>
+          <Button
+            icon={
+              <Icon
+                name="info"
+                color="#ffffff"
+                iconStyle={{ marginRight: 10 }}
+              />
+            }
+            buttonStyle={styles.cardButton}
+            title="Saiba Mais"
             titleStyle={{ fontWeight: "bold" }}
           />
         </Card>
