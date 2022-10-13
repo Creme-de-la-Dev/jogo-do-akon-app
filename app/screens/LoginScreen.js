@@ -19,6 +19,8 @@ import Reanimated, {
     SlideInUp,
     SlideOutDown,
     SlideOutLeft,
+    BounceIn,
+    SlideInDown
   } from "react-native-reanimated";
 
 export default LoginScreen = () => {
@@ -26,11 +28,11 @@ export default LoginScreen = () => {
     <View>
       <LinearGradient colors={["#FCC54A", "#FECD5E"]}>
         <View style={styles.container}>
-            <Reanimated.Text style={styles.gameTitle}>Jogo do{"\n"}AKON</Reanimated.Text>
-            <Reanimated.Image style={styles.akonLogo} source={akonLogo} />
-            <Reanimated.View>
-                <Button style={styles.signUpBtnText} title={"Criar uma Conta"}/>
-                <Button style={styles.loginBtnText} title={"Entrar"}/>
+            <Reanimated.Text entering={SlideInUp.duration(700)} style={styles.gameTitle} >Jogo do{"\n"}AKON</Reanimated.Text>
+            <Reanimated.Image entering={BounceIn.duration(1000)} style={styles.akonLogo} source={akonLogo} />
+            <Reanimated.View entering={SlideInDown.duration(700)}>
+                <Button buttonStyle={styles.signUpBtn} title={"Criar uma Conta"}/>
+                <Button buttonStyle={styles.loginBtn} title={"Entrar"}/>
             </Reanimated.View>
         </View>
       </LinearGradient>
@@ -59,16 +61,21 @@ const styles = StyleSheet.create({
     height: "45%",
     paddinLeft: 40,
     paddingRight: 40,
-    resizeMode: "contain"
+    resizeMode: "contain",
+    marginBottom: 20,
   },
 
-  signUpBtnText: {
-    padding: 20,
+  signUpBtn: {
     borderRadius: 10,
+    marginLeft: 0,
+    marginRight: 0,
+    marginBottom: 0,
+    padding: 15,
+    // backgroundColor: "#2176AE",
     backgroundColor: "#FF8A00"
   },
 
-  loginBtnText: {
+  loginBtn: {
     padding: 20,
     borderRadius: 10,
     backgroundColor: "#2ABA28"
