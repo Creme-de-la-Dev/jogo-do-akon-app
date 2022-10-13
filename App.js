@@ -9,8 +9,13 @@ import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+// Components
+import BottomNavigator from "./src/navigator/BottomNavigator";
+
 // Screens
 import HomeScreen from "./app/screens/HomeScreen";
+import PlayScreen from "./app/screens/PlayScreen";
+import ProfileScreen from "./app/screens/ProfileScreen";
 
 export default function App() {
   // Stack Navigation
@@ -20,13 +25,53 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
+          name="BottomNavigator"
+          component={BottomNavigator}
+          options={{
+            headerShown: false,
+            gestureEnabled: false,
+            animationEnabled: false,
+            headerStyle: {
+              backgroundColor: "#fbd276",
+            },
+          }}
+        />
+
+        <Stack.Screen
           name="Home"
           component={HomeScreen}
           options={{
+            headerShown: true,
+            headerTitle: "Home",
             animationEnabled: false,
             headerStyle: {
-              backgroundColor: "#fbd276"
-            }
+              backgroundColor: "#fbd276",
+            },
+          }}
+        />
+
+        <Stack.Screen
+          name="Play"
+          component={PlayScreen}
+          options={{
+            headerShown: true,
+            headerTitle: "Jogar",
+            animationEnabled: false,
+            headerStyle: {
+              backgroundColor: "#fbd276",
+            },
+          }}
+        />
+        <Stack.Screen
+          name="Profile"
+          component={ProfileScreen}
+          options={{
+            animationEnabled: false,
+            headerTitle: "Perfil",
+            headerShown: true,
+            headerStyle: {
+              backgroundColor: "#fbd276",
+            },
           }}
         />
       </Stack.Navigator>
