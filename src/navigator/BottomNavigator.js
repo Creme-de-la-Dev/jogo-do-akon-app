@@ -16,17 +16,17 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 // Icons
 import Ionicon from "react-native-vector-icons/Ionicons";
+import MCIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 const Tab = createBottomTabNavigator();
 
 const BottomNavigator = ({ route, navigation }) => {
-
   return (
     <Tab.Navigator
       initialRouteName={homeName}
       screenOptions={({ route }) => ({
         headerShown: true,
-        // tabBarActiveTintColor: theme.activeTintColor,
+        tabBarActiveTintColor: "#ffb102",
         // tabBarInactiveTintColor: theme.inactiveTintColor,
         tabBarIndicatorStyle: { width: 0, height: 0, elevation: 0 },
         headerStyle: {
@@ -40,28 +40,40 @@ const BottomNavigator = ({ route, navigation }) => {
           let rn = route.name;
 
           if (rn === homeName) {
-            iconName = focused ? "briefcase" : "briefcase-outline";
+            iconName = focused ? "home" : "home-outline";
           } else if (rn === playName) {
-            iconName = focused ? "list" : "list-outline";
+            iconName = focused ? "controller-classic" : "controller-classic-outline";
           } else if (rn === profileName) {
-            iconName = focused ? "person" : "person-outline";
+            iconName = focused ? "account" : "account-outline";
           }
 
-          return <Ionicon name={iconName} size={size} color={color} />;
+          return <MCIcons name={iconName} size={32} color={color} />;
         },
         tabBarStyle: [
           {
             display: "flex",
-            // backgroundColor: theme.bottomNavColor,
-            // borderTopWidth: theme.borderBottomNav,
+            // backgroundColor: "#fbd276",
+            borderTopWidth: "#fbd276",
           },
           null,
         ],
       })}
     >
-      <Tab.Screen name={homeName} component={HomeScreen} options={{ title: "Home"}}/>
-      <Tab.Screen name={playName} component={PlayScreen} options={{ title: "Jogar"}}/>
-      <Tab.Screen name={profileName} component={ProfileScreen} options={{ title: "Perfil"}}/>
+      <Tab.Screen
+        name={homeName}
+        component={HomeScreen}
+        options={{ title: "Home" }}
+      />
+      <Tab.Screen
+        name={playName}
+        component={PlayScreen}
+        options={{ title: "Jogar" }}
+      />
+      <Tab.Screen
+        name={profileName}
+        component={ProfileScreen}
+        options={{ title: "Perfil" }}
+      />
     </Tab.Navigator>
   );
 };
