@@ -26,14 +26,14 @@ const BottomNavigator = ({ route, navigation }) => {
       initialRouteName={homeName}
       screenOptions={({ route }) => ({
         headerShown: true,
-        tabBarActiveTintColor: theme.activeTintColor,
-        tabBarInactiveTintColor: theme.inactiveTintColor,
+        // tabBarActiveTintColor: theme.activeTintColor,
+        // tabBarInactiveTintColor: theme.inactiveTintColor,
         tabBarIndicatorStyle: { width: 0, height: 0, elevation: 0 },
         headerStyle: {
           shadowOffset: { height: 0, width: 0 },
-          backgroundColor: theme.headerBackground,
+          backgroundColor: "#fbd276",
         },
-        headerTintColor: "#fff",
+        headerTintColor: "#000000",
 
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
@@ -41,7 +41,7 @@ const BottomNavigator = ({ route, navigation }) => {
 
           if (rn === homeName) {
             iconName = focused ? "briefcase" : "briefcase-outline";
-          } else if (rn === historyName) {
+          } else if (rn === playName) {
             iconName = focused ? "list" : "list-outline";
           } else if (rn === profileName) {
             iconName = focused ? "person" : "person-outline";
@@ -52,16 +52,16 @@ const BottomNavigator = ({ route, navigation }) => {
         tabBarStyle: [
           {
             display: "flex",
-            backgroundColor: theme.bottomNavColor,
-            borderTopWidth: theme.borderBottomNav,
+            // backgroundColor: theme.bottomNavColor,
+            // borderTopWidth: theme.borderBottomNav,
           },
           null,
         ],
       })}
     >
-      <Tab.Screen name={homeName} component={HomeScreen} />
-      <Tab.Screen name={playName} component={PlayScreen} />
-      <Tab.Screen name={profileName} component={ProfileScreen} />
+      <Tab.Screen name={homeName} component={HomeScreen} options={{ title: "Home"}}/>
+      <Tab.Screen name={playName} component={PlayScreen} options={{ title: "Jogar"}}/>
+      <Tab.Screen name={profileName} component={ProfileScreen} options={{ title: "Perfil"}}/>
     </Tab.Navigator>
   );
 };

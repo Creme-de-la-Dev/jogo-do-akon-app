@@ -4,16 +4,11 @@ import React, { useContext } from 'react';
 // React Native Components
 import { View, Text, StyleSheet } from 'react-native';
 
-// Light and Dark mode toggle
-import { ThemeContext } from "../../../theme/theme-context";
-
-export default BoilerPlate = () => {
-
-	const { theme } = useContext(ThemeContext);
+export default ProfileScreen = () => {
 
     return (
         <View style={styles.container}>
-            <Text>BoilerPlate</Text>
+            <Text>ProfileScreen</Text>
         </View>
     );
 }
