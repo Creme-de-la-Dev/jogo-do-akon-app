@@ -52,7 +52,6 @@ const BottomNavigator = ({ route, navigation }) => {
         tabBarStyle: [
           {
             display: "flex",
-            // backgroundColor: "#fbd276",
             borderTopWidth: "#fbd276",
           },
           null,
