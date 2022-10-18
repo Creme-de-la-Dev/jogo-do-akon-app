@@ -6,6 +6,7 @@ import { View, Text, StyleSheet, Button } from "react-native";
 
 // Expo
 import { LinearGradient } from "expo-linear-gradient";
+import { StatusBar } from "expo-status-bar";
 
 // Images
 const akonLogo = require("../../assets/akonLogo.png");
@@ -26,13 +27,14 @@ import Reanimated, {
 export default LoginScreen = () => {
   return (
     <View>
+      <StatusBar style="dark" />
       <LinearGradient colors={["#FCC54A", "#FECD5E"]}>
         <View style={styles.container}>
             <Reanimated.Text entering={SlideInUp.duration(700)} style={styles.gameTitle} >Jogo do{"\n"}AKON</Reanimated.Text>
             <Reanimated.Image entering={BounceIn.duration(1000)} style={styles.akonLogo} source={akonLogo} />
             <Reanimated.View entering={SlideInDown.duration(700)}>
-                <Button buttonStyle={styles.signUpBtn} title={"Criar uma Conta"}/>
-                <Button buttonStyle={styles.loginBtn} title={"Entrar"}/>
+                <Button buttonStyle={[styles.signUpBtn]} title={"Criar uma Conta"}/>
+                <Button buttonStyle={[styles.loginBtn]} title={"Entrar"}/>
             </Reanimated.View>
         </View>
       </LinearGradient>
@@ -66,18 +68,18 @@ const styles = StyleSheet.create({
   },
 
   signUpBtn: {
-    borderRadius: 10,
-    marginLeft: 0,
-    marginRight: 0,
-    marginBottom: 0,
-    padding: 15,
+    borderRadius: 12,
+    // marginLeft: 0,
+    // marginRight: 0,
+    // marginBottom: 0,
+    padding: 20,
     // backgroundColor: "#2176AE",
     backgroundColor: "#FF8A00"
   },
 
   loginBtn: {
     padding: 20,
-    borderRadius: 10,
+    borderRadius: 12,
     backgroundColor: "#2ABA28"
   },
 });
