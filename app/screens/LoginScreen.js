@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 
 // React Native Components
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, Text, StyleSheet, Button, TouchableOpacity } from "react-native";
 
 // Expo
 import { LinearGradient } from "expo-linear-gradient";
@@ -32,9 +32,14 @@ export default LoginScreen = () => {
         <View style={styles.container}>
             <Reanimated.Text entering={SlideInUp.duration(700)} style={styles.gameTitle} >Jogo do{"\n"}AKON</Reanimated.Text>
             <Reanimated.Image entering={BounceIn.duration(1000)} style={styles.akonLogo} source={akonLogo} />
-            <Reanimated.View entering={SlideInDown.duration(700)}>
-                <Button buttonStyle={[styles.signUpBtn]} title={"Criar uma Conta"}/>
-                <Button buttonStyle={[styles.loginBtn]} title={"Entrar"}/>
+            <Reanimated.View entering={SlideInDown.duration(700)} style={styles.btnView}>
+                <TouchableOpacity style={styles.signUpBtn}>
+                  <Text style={styles.btnTitle}>Criar uma Conta</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.loginBtn}>
+                  <Text style={styles.btnTitle}>Entrar</Text>
+                </TouchableOpacity>
+
             </Reanimated.View>
         </View>
       </LinearGradient>
@@ -67,19 +72,50 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
+  btnView: {
+    alignItems: 'space-evenly',
+
+  },
+
   signUpBtn: {
-    borderRadius: 12,
-    // marginLeft: 0,
-    // marginRight: 0,
-    // marginBottom: 0,
+    borderRadius: 25,
     padding: 20,
-    // backgroundColor: "#2176AE",
-    backgroundColor: "#FF8A00"
+    backgroundColor: "#FF8A00",
+    textAlign: "center",
+    width: "100%",
+    marginTop: 20,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 25.0,
+    elevation: 5,
   },
 
   loginBtn: {
     padding: 20,
-    borderRadius: 12,
-    backgroundColor: "#2ABA28"
+    borderRadius: 25,
+    backgroundColor: "#24a322",
+    textAlign: "center",
+    width: "100%",
+    marginTop: 20,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 25.0,
+    elevation: 5,
+
+  },
+
+  btnTitle: {
+    alignSelf: "center",
+    fontWeight: "bold",
+    fontSize: 18,
+    color: "#F4F4F4"
   },
 });
