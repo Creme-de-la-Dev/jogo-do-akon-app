@@ -1,8 +1,9 @@
 // React
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 // React Native Components
 import { View, Text, StyleSheet, Button, TouchableOpacity } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
 // Expo
 import { LinearGradient } from "expo-linear-gradient";
@@ -13,18 +14,17 @@ const akonLogo = require("../../assets/akonLogo.png");
 
 // Animations
 import Reanimated, {
-    FadeInDown,
-    FadeInUp,
-    FadeOutDown,
-    SlideInRight,
     SlideInUp,
-    SlideOutDown,
-    SlideOutLeft,
     BounceIn,
     SlideInDown
   } from "react-native-reanimated";
 
-export default LoginScreen = () => {
+  export default LoginScreen = () => {
+
+    const navigation = useNavigation();
+
+    const navigateToHome = navigation.navigate("BottomNavigator");
+
   return (
     <View>
       <StatusBar style="dark" />
@@ -33,10 +33,10 @@ export default LoginScreen = () => {
             <Reanimated.Text entering={SlideInUp.duration(700)} style={styles.gameTitle} >Jogo do{"\n"}AKON</Reanimated.Text>
             <Reanimated.Image entering={BounceIn.duration(1000)} style={styles.akonLogo} source={akonLogo} />
             <Reanimated.View entering={SlideInDown.duration(700)} style={styles.btnView}>
-                <TouchableOpacity style={styles.signUpBtn}>
+                <TouchableOpacity style={styles.signUpBtn} onPress={navigateToHome}>
                   <Text style={styles.btnTitle}>Criar uma Conta</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.loginBtn}>
+                <TouchableOpacity style={styles.loginBtn} onPress={() => navigateToHome}>
                   <Text style={styles.btnTitle}>Entrar</Text>
                 </TouchableOpacity>
 
