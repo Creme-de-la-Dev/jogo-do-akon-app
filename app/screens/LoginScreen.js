@@ -23,7 +23,7 @@ import Reanimated, {
 
     const navigation = useNavigation();
 
-    const navigateToHome = navigation.navigate("BottomNavigator");
+    // const navigateToHome = navigation.navigate("BottomNavigator");
 
   return (
     <View>
@@ -33,10 +33,10 @@ import Reanimated, {
             <Reanimated.Text entering={SlideInUp.duration(700)} style={styles.gameTitle} >Jogo do{"\n"}AKON</Reanimated.Text>
             <Reanimated.Image entering={BounceIn.duration(1000)} style={styles.akonLogo} source={akonLogo} />
             <Reanimated.View entering={SlideInDown.duration(700)} style={styles.btnView}>
-                <TouchableOpacity style={styles.signUpBtn} onPress={navigateToHome}>
+            <TouchableOpacity style={[styles.btnStyle, {backgroundColor: "#FF8A00"}]}>
                   <Text style={styles.btnTitle}>Criar uma Conta</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.loginBtn} onPress={() => navigateToHome}>
+                <TouchableOpacity style={[styles.btnStyle, {backgroundColor: "#24A322"}]}>
                   <Text style={styles.btnTitle}>Entrar</Text>
                 </TouchableOpacity>
 
@@ -77,27 +77,9 @@ const styles = StyleSheet.create({
 
   },
 
-  signUpBtn: {
-    borderRadius: 25,
-    padding: 20,
-    backgroundColor: "#FF8A00",
-    textAlign: "center",
-    width: "100%",
-    marginTop: 20,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 0,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 25.0,
-    elevation: 5,
-  },
-
-  loginBtn: {
+  btnStyle: {
     padding: 20,
     borderRadius: 25,
-    backgroundColor: "#24a322",
     textAlign: "center",
     width: "100%",
     marginTop: 20,
