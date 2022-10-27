@@ -4,7 +4,6 @@ import React, { useContext } from 'react';
 // React Native Components
 import { View, Text, StyleSheet } from 'react-native';
 
-
 export default PlayScreen = () => {
 
     return (

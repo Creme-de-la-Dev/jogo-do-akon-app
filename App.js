@@ -25,6 +25,18 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
+      <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{
+            headerShown: false,
+            animationEnabled: false,
+            headerStyle: {
+              backgroundColor: "#fbd276",
+            },
+          }}
+        />
+
         <Stack.Screen
           name="BottomNavigator"
           component={BottomNavigator}
@@ -75,17 +87,7 @@ export default function App() {
             },
           }}
         />
-        <Stack.Screen
-          name="Login"
-          component={LoginScreen}
-          options={{
-            headerShown: false,
-            animationEnabled: false,
-            headerStyle: {
-              backgroundColor: "#fbd276",
-            },
-          }}
-        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
