@@ -46,6 +46,9 @@ export default ProfileScreen = () => {
           </View>
           <Text style={styles.userStatsNumber}>7</Text>
         </View>
+        {/* <TouchableOpacity style={styles.editButton}>
+          <Text style={styles.editButtonText}>Sair</Text>
+        </TouchableOpacity> */}
       </View>
      </View>
   );
