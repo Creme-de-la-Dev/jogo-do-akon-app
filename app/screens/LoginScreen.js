@@ -3,7 +3,7 @@ import React, { useContext, useEffect } from "react";
 
 // React Native Components
 import { View, Text, StyleSheet, Button, TouchableOpacity } from "react-native";
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
 
 // Expo
 import { LinearGradient } from "expo-linear-gradient";
@@ -14,33 +14,46 @@ const akonLogo = require("../../assets/akonLogo.png");
 
 // Animations
 import Reanimated, {
-    SlideInUp,
-    BounceIn,
-    SlideInDown
-  } from "react-native-reanimated";
+  SlideInUp,
+  BounceIn,
+  SlideInDown,
+} from "react-native-reanimated";
 
-  export default LoginScreen = () => {
-
-    const navigation = useNavigation();
-
-    // const navigateToHome = navigation.navigate("BottomNavigator");
+export default LoginScreen = () => {
+  const navigation = useNavigation();
 
   return (
     <View>
       <StatusBar style="dark" />
       <LinearGradient colors={["#FCC54A", "#FECD5E"]}>
         <View style={styles.container}>
-            <Reanimated.Text entering={SlideInUp.duration(700)} style={styles.gameTitle} >Jogo do{"\n"}AKON</Reanimated.Text>
-            <Reanimated.Image entering={BounceIn.duration(1000)} style={styles.akonLogo} source={akonLogo} />
-            <Reanimated.View entering={SlideInDown.duration(700)} style={styles.btnView}>
-            <TouchableOpacity style={[styles.btnStyle, {backgroundColor: "#FF8A00"}]}>
-                  <Text style={styles.btnTitle}>Criar uma Conta</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={[styles.btnStyle, {backgroundColor: "#24A322"}]}>
-                  <Text style={styles.btnTitle}>Entrar</Text>
-                </TouchableOpacity>
-
-            </Reanimated.View>
+          <Reanimated.Text
+            entering={SlideInUp.duration(700)}
+            style={styles.gameTitle}
+          >
+            Jogo do{"\n"}AKON
+          </Reanimated.Text>
+          <Reanimated.Image
+            entering={BounceIn.duration(1000)}
+            style={styles.akonLogo}
+            source={akonLogo}
+          />
+          <Reanimated.View
+            entering={SlideInDown.duration(700)}
+            style={styles.btnView}
+          >
+            <TouchableOpacity
+              style={[styles.btnStyle, { backgroundColor: "#FF8A00" }]}
+            >
+              <Text style={styles.btnTitle}>Criar uma Conta</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.btnStyle, { backgroundColor: "#24A322" }]}
+              onPress={navigation.navigate("BottomNavigator")}
+            >
+              <Text style={styles.btnTitle}>Entrar</Text>
+            </TouchableOpacity>
+          </Reanimated.View>
         </View>
       </LinearGradient>
     </View>
@@ -73,8 +86,7 @@ const styles = StyleSheet.create({
   },
 
   btnView: {
-    alignItems: 'space-evenly',
-
+    alignItems: "space-evenly",
   },
 
   btnStyle: {
@@ -91,13 +103,12 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 25.0,
     elevation: 5,
-
   },
 
   btnTitle: {
     alignSelf: "center",
     fontWeight: "bold",
     fontSize: 18,
-    color: "#F4F4F4"
+    color: "#F4F4F4",
   },
 });
