@@ -46,10 +46,10 @@ export default ProfileScreen = () => {
           </View>
           <Text style={styles.userStatsNumber}>7</Text>
         </View>
-        {/* <TouchableOpacity style={styles.editButton}>
-          <Text style={styles.editButtonText}>Sair</Text>
-        </TouchableOpacity> */}
       </View>
+        <TouchableOpacity style={styles.logoutButton}>
+          <Text style={styles.logoutButtonText}>Sair</Text>
+        </TouchableOpacity>
      </View>
   );
 };
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   },
 
   header: {
-    height: "65%",
+    height: "58%",
     width: "100%",
     backgroundColor: "#f9dfa2",
     borderBottomLeftRadius: "300px",
@@ -135,5 +135,24 @@ const styles = StyleSheet.create({
   userStatsNumber: {
     fontSize: "20px",
     fontWeight: "bold",
+  },
+
+  logoutButton: {
+    marginTop: 60,
+    backgroundColor: "#f9dfa2",
+    padding: 15,
+    borderRadius: 50,
+    flexDirection: "row",
+    justifyItems: "center",
+    alignSelf: "center",
+  },
+
+  logoutButtonText: {
+    fontSize: 16,
+    fontWeight: "700",
+    paddingLeft: 25,
+    paddingRight: 25,
+    alignSelf: "center",
+    textAlign: "center",
   },
 });

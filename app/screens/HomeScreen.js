@@ -57,7 +57,7 @@ export default HomeScreen = () => {
             borderRadius: 10,
             borderColor: "#fbd276",
             borderWidth: 2,
-            marginBottom: 100,
+            marginBottom: 50,
           }}
         >
           <Card.Title style={styles.cardTitle}>Versão PRO</Card.Title>
