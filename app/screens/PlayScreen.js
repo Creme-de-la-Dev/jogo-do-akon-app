@@ -4,16 +4,18 @@ import React, { useContext } from "react";
 // React Native Components
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 
+// Top Tab Navigator
+import TopNavigator from "../../src/navigators/TopTabNavigator";
+
 export default PlayScreen = () => {
   return (
-    <ScrollView style={{ flex: 1 }}>
-      <View style={styles.header}>
+      <View style={{flex: 1}}>
+        <TopNavigator />
         {/* <Text style={styles.headerText}>
           Selecione o modo {"\n"}
           de JOGO.
         </Text> */}
       </View>
-    </ScrollView>
   );
 };
 
@@ -25,8 +27,8 @@ const styles = StyleSheet.create({
   },
 
   header: {
-    paddingTop: 30,
-    paddingLeft: 25,
+    // paddingTop: 30,
+    // paddingLeft: 25,
   },
 
   headerText: {

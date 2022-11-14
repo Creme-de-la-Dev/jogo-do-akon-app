@@ -1,7 +1,7 @@
 // React
 import React from "react";
 
-// React Native External Components
+// React Navigation
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
 // Tabs
@@ -11,15 +11,14 @@ import OnlineMatch from "../tabs/OnlineMatch";
 const Tab = createMaterialTopTabNavigator();
 
 const TopNavigator = () => {
-
   return (
     <Tab.Navigator
       initialRouteName="Partida Local"
       screenOptions={{
         tabBarLabelStyle: { fontSize: 14, fontWeight: "700" },
-        tabBarActiveTintColor: "white",
-        tabBarIndicatorStyle: { backgroundColor: theme.indicator },
-        tabBarStyle: { backgroundColor: theme.headerBackground },
+        tabBarActiveTintColor: "#000",
+        tabBarIndicatorStyle: { backgroundColor: "#000" },
+        tabBarStyle: { backgroundColor: "#f2f2f2" },
       }}
     >
       <Tab.Screen
