@@ -16,9 +16,12 @@ const TopNavigator = () => {
       initialRouteName="Partida Local"
       screenOptions={{
         tabBarLabelStyle: { fontSize: 14, fontWeight: "700" },
-        tabBarActiveTintColor: "#000",
-        tabBarIndicatorStyle: { backgroundColor: "#000" },
-        tabBarStyle: { backgroundColor: "#f2f2f2" },
+        // tabBarActiveTintColor: "#000",
+        // tabBarIndicatorStyle: { backgroundColor: "#ffb102" },
+        // tabBarStyle: { backgroundColor: "#f2f2f2" },
+        tabBarActiveTintColor: "#171615",
+        tabBarIndicatorStyle: { backgroundColor: "#ffb102" },
+        tabBarStyle: { backgroundColor: "#fbd276" },
       }}
     >
       <Tab.Screen
