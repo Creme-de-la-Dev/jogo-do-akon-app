@@ -10,7 +10,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // Components
-import BottomNavigator from "./src/navigator/BottomNavigator";
+import BottomNavigator from "./src/navigators/BottomNavigator";
 
 // Screens
 import HomeScreen from "./app/screens/HomeScreen";

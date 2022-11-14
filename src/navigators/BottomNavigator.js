@@ -2,9 +2,9 @@
 import React from "react";
 
 // App Screens
-import HomeScreen from "../.././app/screens/HomeScreen";
-import PlayScreen from "../.././app/screens/PlayScreen";
-import ProfileScreen from "../.././app/screens/ProfileScreen";
+import HomeScreen from "../../app/screens/HomeScreen";
+import PlayScreen from "../../app/screens/PlayScreen";
+import ProfileScreen from "../../app/screens/ProfileScreen";
 
 // Screen names
 const homeName = "Home";
