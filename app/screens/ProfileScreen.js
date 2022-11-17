@@ -1,12 +1,11 @@
 // React
-import React, { useContext } from "react";
+import React from "react";
 
 // React Native Components
-import { View, Text, StyleSheet, Button, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 // Icons
 import Ionicon from "react-native-vector-icons/Ionicons";
-import MCIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 export default ProfileScreen = () => {
   return (
@@ -24,21 +23,21 @@ export default ProfileScreen = () => {
       </View>
       <View style={styles.container}>
         <View style={styles.userStatsContainer}>
-          <View style={{flexDirection: "row",}}>
+          <View style={{ flexDirection: "row" }}>
             <Ionicon name={"checkmark-circle"} size={22} />
             <Text style={styles.userStatsText}>Vitórias:</Text>
           </View>
           <Text style={styles.userStatsNumber}>32</Text>
         </View>
         <View style={styles.userStatsContainer}>
-          <View style={{flexDirection: "row"}}>
+          <View style={{ flexDirection: "row" }}>
             <Ionicon name={"close-circle"} size={22} />
             <Text style={styles.userStatsText}>Derrotas:</Text>
           </View>
           <Text style={styles.userStatsNumber}>11</Text>
         </View>
         <View style={styles.userStatsContainer}>
-          <View style={{flexDirection: "row"}}>
+          <View style={{ flexDirection: "row" }}>
             <Ionicon name={"trophy"} size={22} />
             <Text style={styles.userStatsText}>
               Record de vitórias seguidas:
@@ -47,10 +46,10 @@ export default ProfileScreen = () => {
           <Text style={styles.userStatsNumber}>7</Text>
         </View>
       </View>
-        <TouchableOpacity style={styles.logoutButton}>
-          <Text style={styles.logoutButtonText}>Sair</Text>
-        </TouchableOpacity>
-     </View>
+      <TouchableOpacity style={styles.logoutButton}>
+        <Text style={styles.logoutButtonText}>Sair</Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 

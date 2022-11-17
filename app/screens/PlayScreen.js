@@ -1,23 +1,16 @@
 // React
-import React, { useContext } from 'react';
+import React from "react";
 
 // React Native Components
-import { View, Text, StyleSheet } from 'react-native';
+import { View } from "react-native";
+
+// Top Tab Navigator
+import TopNavigator from "../../src/navigators/TopTabNavigator";
 
 export default PlayScreen = () => {
-
-    return (
-        <View style={styles.container}>
-            <Text>PlayScreen</Text>
-        </View>
-    );
-}
-
-const styles = StyleSheet.create({
-
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignSelf: 'center',
-    }
-});
+  return (
+    <View style={{ flex: 1 }}>
+      <TopNavigator />
+    </View>
+  );
+};
