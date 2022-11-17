@@ -8,6 +8,7 @@ import { Card, Button, Icon } from "@rneui/themed";
 // Images
 const ClassicMode = require("../../assets/classicMode.jpeg");
 const CoopMode = require("../../assets/coopMode.png");
+const VersusMode = require("../../assets/versus.png");
 const BattleRoyale = require("../../assets/battleRoyale.png");
 
 // Icon
@@ -82,6 +83,36 @@ export default LocalMatch = () => {
             borderRadius: 10,
             borderColor: "#fbd276",
             borderWidth: 2,
+          }}
+        >
+          <Card.Title style={styles.cardTitle}>Modo Versus</Card.Title>
+          <Card.Divider />
+          <Card.Image
+            style={{ padding: 0, borderRadius: 10 }}
+            source={VersusMode}
+          />
+          <Text style={styles.cardText}>
+            Akon vs Fifty, quem será o vencedor? Quem fizer mais vítimas até o fim da partida será vitorioso!
+          </Text>
+          <Button
+            icon={
+              <MCIcon
+                name="cart"
+                color="#ffffff"
+                iconStyle={{ marginRight: 10 }}
+                size={28}
+              />
+            }
+            buttonStyle={[styles.cardButton, {backgroundColor: "#939385"}]}
+            title="Adiquira a versão PRO"
+            titleStyle={{ fontWeight: "bold", marginLeft: 10, }}
+          />
+        </Card>
+        <Card
+          containerStyle={{
+            borderRadius: 10,
+            borderColor: "#fbd276",
+            borderWidth: 2,
             marginBottom: 20,
           }}
         >
@@ -97,14 +128,14 @@ export default LocalMatch = () => {
           <Button
             icon={
               <MCIcon
-                name="controller-classic"
+                name="cart"
                 color="#ffffff"
                 iconStyle={{ marginRight: 10 }}
                 size={28}
               />
             }
-            buttonStyle={styles.cardButton}
-            title="Jogar"
+            buttonStyle={[styles.cardButton, {backgroundColor: "#939385"}]}
+            title="Adiquira a versão PRO"
             titleStyle={{ fontWeight: "bold", marginLeft: 10, }}
           />
         </Card>
