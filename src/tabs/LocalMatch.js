@@ -27,22 +27,24 @@ export default LocalMatch = () => {
           <Card.Title style={styles.cardTitle}>Modo Clássico</Card.Title>
           <Card.Divider />
           <Card.Image
-            style={{ padding: 0, borderRadius: 10, marginBottom: 20 }}
+            style={{ padding: 0, borderRadius: 10 }}
             source={ClassicMode}
           />
+          <Text style={styles.cardText}>
+            De 3 a 10 jogadores, descubra quem de vocês é o verdadeiro Akon e cante como se não houvesse amanhã!
+          </Text>
           <Button
             icon={
               <MCIcon
                 name="controller-classic"
                 color="#ffffff"
                 iconStyle={{ marginRight: 10 }}
-                size={25}
-                
+                size={28}
               />
             }
             buttonStyle={styles.cardButton}
             title="Jogar"
-            titleStyle={{ fontWeight: "bold" }}
+            titleStyle={{ fontWeight: "bold", marginLeft: 10, }}
           />
         </Card>
         <Card
@@ -55,24 +57,24 @@ export default LocalMatch = () => {
           <Card.Title style={styles.cardTitle}>Modo Co-op</Card.Title>
           <Card.Divider />
           <Card.Image
-            style={{ padding: 0, borderRadius: 10, resizeMode: "stretch", marginBottom: 20 }}
+            style={{ padding: 0, borderRadius: 10, resizeMode: "stretch" }}
             source={CoopMode}
           />
-          {/* <Text style={styles.cardText}>
-            Adiquira a Versão PRO por apenas R$ 2,99 e desbloqueie novas formas
-            de jogar!
-          </Text> */}
+          <Text style={styles.cardText}>
+            Junte-se em duplas e descubra qual dupla é o Akon e o Sean Kingston antes que seja tarde demais!
+          </Text>
           <Button
             icon={
-              <Icon
-                name="info"
+              <MCIcon
+                name="controller-classic"
                 color="#ffffff"
                 iconStyle={{ marginRight: 10 }}
+                size={28}
               />
             }
             buttonStyle={styles.cardButton}
-            title="Saiba Mais"
-            titleStyle={{ fontWeight: "bold" }}
+            title="Jogar"
+            titleStyle={{ fontWeight: "bold", marginLeft: 10, }}
           />
         </Card>
         <Card
@@ -86,23 +88,24 @@ export default LocalMatch = () => {
           <Card.Title style={styles.cardTitle}>Battle Royale</Card.Title>
           <Card.Divider />
           <Card.Image
-            style={{ padding: 0, borderRadius: 10, marginBottom: 20 }}
+            style={{ padding: 0, borderRadius: 10 }}
             source={BattleRoyale}
           />
-          {/* <Text style={styles.cardText}>
-            Aprenda as regras e vire um "expert" no jogo mais amado do mundo!
-          </Text> */}
+          <Text style={styles.cardText}>
+            De 20 a 100 jogadores, seja o último a sobreviver ou seja o Akon que ganhe de todo mundo!
+          </Text>
           <Button
             icon={
-              <Icon
-                name="school"
+              <MCIcon
+                name="controller-classic"
                 color="#ffffff"
                 iconStyle={{ marginRight: 10 }}
+                size={28}
               />
             }
             buttonStyle={styles.cardButton}
-            title="Aprender as Regras"
-            titleStyle={{ fontWeight: "bold" }}
+            title="Jogar"
+            titleStyle={{ fontWeight: "bold", marginLeft: 10, }}
           />
         </Card>
       </View>
@@ -116,7 +119,7 @@ const styles = StyleSheet.create({
     // alignSelf: "center",
   },
   mainSection: {
-    paddingTop: 30,
+    paddingTop: 15,
   },
 
   cardTitle: {
