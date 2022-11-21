@@ -11,7 +11,7 @@ const CoopMode = require("../../assets/coopMode.png");
 const VersusMode = require("../../assets/versus.png");
 const BattleRoyale = require("../../assets/battleRoyale.png");
 
-// Icon
+// Icons
 import MCIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
 export default LocalMatch = () => {
@@ -32,7 +32,7 @@ export default LocalMatch = () => {
             source={ClassicMode}
           />
           <Text style={styles.cardText}>
-            De 3 a 10 jogadores, descubra quem de vocês é o verdadeiro Akon e cante como se não houvesse amanhã!
+            De 3 a 10 jogadores, descubra qual de vocês é o verdadeiro Akon e cante como se não houvesse amanhã!
           </Text>
           <Button
             icon={
@@ -97,7 +97,7 @@ export default LocalMatch = () => {
           <Button
             icon={
               <MCIcon
-                name="cart"
+                name="lock"
                 color="#ffffff"
                 iconStyle={{ marginRight: 10 }}
                 size={28}
@@ -128,7 +128,7 @@ export default LocalMatch = () => {
           <Button
             icon={
               <MCIcon
-                name="cart"
+                name="lock"
                 color="#ffffff"
                 iconStyle={{ marginRight: 10 }}
                 size={28}
