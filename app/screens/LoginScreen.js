@@ -2,8 +2,10 @@
 import React, { useContext, useEffect } from "react";
 
 // React Native Components
-import { View, Text, StyleSheet, Button, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+// import { Button } from "react-native-elements";
+// import { TouchableOpacity } from "react-native-gesture-handler";
 
 // Expo
 import { LinearGradient } from "expo-linear-gradient";
@@ -52,12 +54,13 @@ export default LoginScreen = () => {
           >
             <TouchableOpacity
               style={[styles.btnStyle, { backgroundColor: "#FF8A00" }]}
+              onPress={() => navigateToSignUp()}
             >
               <Text style={styles.btnTitle}>Criar uma Conta</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.btnStyle, { backgroundColor: "#24A322" }]}
-              onPress={navigation.navigate("BottomNavigator")}
+              onPress={() => navigateToSignIn()}
             >
               <Text style={styles.btnTitle}>Entrar</Text>
             </TouchableOpacity>
