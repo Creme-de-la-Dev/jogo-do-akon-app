@@ -2,30 +2,30 @@ export default [
 
     {
         id: "1",
-        title: "Seja bem-vindo(a) ao Negocie",
-        description: "Sua plataforma para gerenciamento de negociações",
-        image: require("../../../assets/undraw-welcome.png"),
+        title: "Chame seus amigos",
+        description: "Junte-se em um grupo de 3 a 10 jogadores",
+        image: require("../../assets/group.png"),
     },
 
     {
         id: "2",
-        title: "Aprove ou Reprove Vagas",
-        description: "Feche negociações remotamente com apenas alguns toques",
-        image: require("../../../assets/undraw-hire.png"),
+        title: "Escolha seu Akon",
+        description: "A pessoa sorteada deverá escolher mentalmente um jogador para ser o Akon",
+        image: require("../../assets/idea.png"),
     },
 
     {
         id: "3",
-        title: "Notificações em tempo real",
-        description: "Receba alertas quando vagas forem aprovadas ou reprovadas",
-        image: require("../../../assets/undraw-noti.png"),
+        title: "Descreva o Akon",
+        description: "O jogador deverá descrever características do Akon escolhido, enquanto os outros jogadores tentam adivinhar",
+        image: require("../../assets/speak.png"),
     },
 
     {
         id: "4",
-        title: "Histórico de Negociações",
-        description: "Consulte o histórico para conferir todas as vagas fechadas por colaboradores",
-        image: require("../../../assets/undraw-history.png"),
+        title: "Descoberta e fuga",
+        description: "Quando o jogador perceber que é o Akon escolhido, deverá cantar apontando para alguem. A pessoa que for apontada será a perdedora e não jogará a próxima partida.",
+        image: require("../../assets/hitrun.png"),
     },
 
 

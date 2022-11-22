@@ -17,6 +17,7 @@ import HomeScreen from "./app/screens/HomeScreen";
 import PlayScreen from "./app/screens/PlayScreen";
 import ProfileScreen from "./app/screens/ProfileScreen";
 import LoginScreen from "./app/screens/LoginScreen";
+import Onboarding from "./app/screens/Onboarding";
 
 export default function App() {
   // Stack Navigation
@@ -25,7 +26,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
-      <Stack.Screen
+        <Stack.Screen
           name="Login"
           component={LoginScreen}
           options={{
@@ -88,6 +89,13 @@ export default function App() {
           }}
         />
 
+        <Stack.Screen
+          name="Onboarding"
+          component={Onboarding}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
