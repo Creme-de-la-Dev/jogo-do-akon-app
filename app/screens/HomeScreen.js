@@ -4,6 +4,7 @@ import React, { useContext } from "react";
 // React Native Components
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { Card, Button, Icon } from "@rneui/themed";
+import { useNavigation } from "@react-navigation/native";
 
 // Expo
 import { StatusBar } from "expo-status-bar";
@@ -13,6 +14,9 @@ const GameplayImage = require("../../assets/gameplay.png");
 const ProVersionImage = require("../../assets/pro.jpeg");
 
 export default HomeScreen = () => {
+
+  const navigation = useNavigation();
+
   return (
     <ScrollView style={{ flex: 1 }}>
       <StatusBar style="dark" />
@@ -50,6 +54,7 @@ export default HomeScreen = () => {
             buttonStyle={styles.cardButton}
             title="Aprender as Regras"
             titleStyle={{ fontWeight: "bold" }}
+            onPress={() => navigation.navigate("Onboarding")}
           />
         </Card>
         <Card
