@@ -22,6 +22,14 @@ import Reanimated, {
 export default LoginScreen = () => {
   const navigation = useNavigation();
 
+  const navigateToSignIn = () => {
+    navigation.navigate("SignIn");
+  }
+
+  const navigateToSignUp = () => {
+    navigation.navigate("SignUp");
+  }
+
   return (
     <View>
       <StatusBar style="dark" />
