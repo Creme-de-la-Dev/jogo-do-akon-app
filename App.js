@@ -102,14 +102,27 @@ export default function App() {
           name="SignIn"
           component={SignInScreen}
           options={{
-            headerShown: false,
+            headerShown: true,
+            headerBackTitle: "Voltar",
+            headerTitle: "Criar conta",
+            animationEnabled: true,
+            headerStyle: {
+              backgroundColor: "#fbd276",
+              shadowOffset: { height: 0, width: 0 },
+            },
           }}
         />
         <Stack.Screen
           name="SignUp"
           component={SignUpScreen}
           options={{
-            headerShown: false,
+            headerShown: true,
+            headerBackTitle: "Voltar",
+            headerTitle: "Entrar",
+            animationEnabled: true,
+            headerStyle: {
+              backgroundColor: "#fbd276",
+            },
           }}
         />
       </Stack.Navigator>
