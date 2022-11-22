@@ -2,12 +2,22 @@
 import React from "react";
 
 // React Native Components
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Alert } from "react-native";
 
 // Icons
 import Ionicon from "react-native-vector-icons/Ionicons";
 
+// React Navigation
+import { useNavigation } from "@react-navigation/native";
+
 export default ProfileScreen = () => {
+  const navigation = useNavigation();
+
+  // Logging the user out
+  const logout = () => {
+    navigation.navigate("Login");
+  };
+
   return (
     <View>
       <View style={styles.header}>
@@ -46,7 +56,18 @@ export default ProfileScreen = () => {
           <Text style={styles.userStatsNumber}>7</Text>
         </View>
       </View>
-      <TouchableOpacity style={styles.logoutButton}>
+      <TouchableOpacity style={styles.logoutButton}
+        onPress={() =>
+          Alert.alert("Atenção", "Deseja sair da sua conta?", [
+            {
+              text: "Cancelar",
+              onPress: () => null,
+              style: "cancel",
+            },
+            { text: "Sair", onPress: logout },
+          ])
+        }
+      >
         <Text style={styles.logoutButtonText}>Sair</Text>
       </TouchableOpacity>
     </View>
