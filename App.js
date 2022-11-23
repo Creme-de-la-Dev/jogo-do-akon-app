@@ -104,7 +104,7 @@ export default function App() {
           options={{
             headerShown: true,
             headerBackTitle: "Voltar",
-            headerTitle: "Criar conta",
+            headerTitle: "Entrar",
             animationEnabled: true,
             headerStyle: {
               backgroundColor: "#fbd276",
@@ -118,7 +118,7 @@ export default function App() {
           options={{
             headerShown: true,
             headerBackTitle: "Voltar",
-            headerTitle: "Entrar",
+            headerTitle: "Criar Conta",
             animationEnabled: true,
             headerStyle: {
               backgroundColor: "#fbd276",
