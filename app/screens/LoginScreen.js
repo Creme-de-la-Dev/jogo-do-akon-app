@@ -4,8 +4,6 @@ import React, { useContext, useEffect } from "react";
 // React Native Components
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-// import { Button } from "react-native-elements";
-// import { TouchableOpacity } from "react-native-gesture-handler";
 
 // Expo
 import { LinearGradient } from "expo-linear-gradient";
