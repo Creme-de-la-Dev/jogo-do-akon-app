@@ -18,6 +18,8 @@ import PlayScreen from "./app/screens/PlayScreen";
 import ProfileScreen from "./app/screens/ProfileScreen";
 import LoginScreen from "./app/screens/LoginScreen";
 import Onboarding from "./app/screens/Onboarding";
+import SignInScreen from "./app/screens/SignInScreen";
+import SignUpScreen from "./app/screens/SignUpScreen";
 
 export default function App() {
   // Stack Navigation
@@ -94,6 +96,33 @@ export default function App() {
           component={Onboarding}
           options={{
             headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="SignIn"
+          component={SignInScreen}
+          options={{
+            headerShown: true,
+            headerBackTitle: "Voltar",
+            headerTitle: "Entrar",
+            animationEnabled: true,
+            headerStyle: {
+              backgroundColor: "#fbd276",
+              shadowOffset: { height: 0, width: 0 },
+            },
+          }}
+        />
+        <Stack.Screen
+          name="SignUp"
+          component={SignUpScreen}
+          options={{
+            headerShown: true,
+            headerBackTitle: "Voltar",
+            headerTitle: "Criar Conta",
+            animationEnabled: true,
+            headerStyle: {
+              backgroundColor: "#fbd276",
+            },
           }}
         />
       </Stack.Navigator>

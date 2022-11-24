@@ -2,7 +2,7 @@
 import React, { useContext, useEffect } from "react";
 
 // React Native Components
-import { View, Text, StyleSheet, Button, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 // Expo
@@ -21,6 +21,14 @@ import Reanimated, {
 
 export default LoginScreen = () => {
   const navigation = useNavigation();
+
+  const navigateToSignIn = () => {
+    navigation.navigate("SignIn");
+  }
+
+  const navigateToSignUp = () => {
+    navigation.navigate("SignUp");
+  }
 
   return (
     <View>
@@ -44,12 +52,13 @@ export default LoginScreen = () => {
           >
             <TouchableOpacity
               style={[styles.btnStyle, { backgroundColor: "#FF8A00" }]}
+              onPress={() => navigateToSignUp()}
             >
               <Text style={styles.btnTitle}>Criar uma Conta</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.btnStyle, { backgroundColor: "#24A322" }]}
-              onPress={navigation.navigate("BottomNavigator")}
+              onPress={() => navigateToSignIn()}
             >
               <Text style={styles.btnTitle}>Entrar</Text>
             </TouchableOpacity>
