@@ -32,21 +32,27 @@ export default SignUpScreen = () => {
               style={styles.input}
               placeholder="Nome"
               keyboardType="text"
+              autoCapitalize="words"
             />
             <TextInput
               style={styles.input}
               placeholder="Email"
-              keyboardType="text"
+              keyboardType="email-address"
+              autoCapitalize="none"
             />
             <TextInput
               style={styles.input}
               placeholder="Senha"
               keyboardType="text"
+              secureTextEntry={true}
+              autoCapitalize="none"
             />
             <TextInput
               style={styles.input}
               placeholder="Confirmação de senha"
               keyboardType="text"
+              secureTextEntry={true}
+              autoCapitalize="none"
             />
           </View>
         <Button
