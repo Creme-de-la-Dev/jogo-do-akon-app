@@ -16,7 +16,7 @@ export default SignUpScreen = () => {
           borderRadius: 10,
           borderColor: "#fbd276",
           borderWidth: 5,
-          height: "70%",
+          height: "67%",
           shadowColor: "#000",
           shadowOffset: {
             width: 0,
@@ -27,31 +27,33 @@ export default SignUpScreen = () => {
           elevation: 5,
         }}
       >
-        <TextInput
-          style={styles.input}
-          placeholder="Nome"
-          keyboardType="text"
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Email"
-          keyboardType="text"
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Senha"
-          keyboardType="text"
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Confirmação de senha"
-          keyboardType="text"
-        />
+          <View>
+            <TextInput
+              style={styles.input}
+              placeholder="Nome"
+              keyboardType="text"
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Email"
+              keyboardType="text"
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Senha"
+              keyboardType="text"
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Confirmação de senha"
+              keyboardType="text"
+            />
+          </View>
         <Button
           buttonStyle={styles.cardButton}
           title="Criar conta"
           titleStyle={{ fontWeight: "bold", marginLeft: 10 }}
-        />
+          />
       </Card>
     </View>
   );
@@ -82,6 +84,7 @@ const styles = StyleSheet.create({
     marginLeft: 0,
     marginRight: 0,
     marginBottom: 0,
+    marginTop: 70,
     padding: 15,
     backgroundColor: "#FF8A00",
     width: 300,
@@ -95,6 +98,5 @@ const styles = StyleSheet.create({
     width: "100%",
     borderRadius: 10,
     borderColor: "#fbd276",
-
   },
 });
