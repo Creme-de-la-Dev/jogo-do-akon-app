@@ -20,6 +20,7 @@ import LoginScreen from "./app/screens/LoginScreen";
 import Onboarding from "./app/screens/Onboarding";
 import SignInScreen from "./app/screens/SignInScreen";
 import SignUpScreen from "./app/screens/SignUpScreen";
+import ClassicGameplay from "./app/screens/ClassicGameplay";
 
 export default function App() {
   // Stack Navigation
@@ -123,6 +124,13 @@ export default function App() {
             headerStyle: {
               backgroundColor: "#fbd276",
             },
+          }}
+        />
+        <Stack.Screen
+          name="ClassicGameplay"
+          component={ClassicGameplay}
+          options={{
+            headerShown: false,
           }}
         />
       </Stack.Navigator>
