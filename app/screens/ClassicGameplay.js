@@ -4,6 +4,10 @@ import React, { useContext } from 'react';
 // React Native Components
 import { View, Text, StyleSheet } from 'react-native';
 
+// Expo
+import { LinearGradient } from "expo-linear-gradient";
+import { StatusBar } from "expo-status-bar";
+
 export default ClassicGameplay = () => {
 
     return (

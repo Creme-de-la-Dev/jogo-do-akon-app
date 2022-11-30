@@ -4,6 +4,7 @@ import React, { useContext } from "react";
 // React Native Components
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { Card, Button, Icon } from "@rneui/themed";
+import { useNavigation } from "@react-navigation/native";
 
 // Images
 const ClassicMode = require("../../assets/classicMode.jpeg");
@@ -15,6 +16,12 @@ const BattleRoyale = require("../../assets/battleRoyale.png");
 import MCIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
 export default LocalMatch = () => {
+  const navigation = useNavigation();
+
+  const navigateToClassicMatch = () => {
+    navigation.navigate("ClassicGameplay");
+  }
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.mainSection}>
@@ -46,6 +53,7 @@ export default LocalMatch = () => {
             buttonStyle={styles.cardButton}
             title="Jogar"
             titleStyle={{ fontWeight: "bold", marginLeft: 10, }}
+            onPress={() => navigateToClassicMatch()}
           />
         </Card>
         <Card

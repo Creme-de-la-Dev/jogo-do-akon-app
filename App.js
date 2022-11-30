@@ -131,6 +131,7 @@ export default function App() {
           component={ClassicGameplay}
           options={{
             headerShown: false,
+            gestureEnabled: false,
           }}
         />
       </Stack.Navigator>
