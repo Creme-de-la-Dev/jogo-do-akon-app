@@ -1,5 +1,5 @@
 // React
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // React Native Components
 import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
@@ -18,10 +18,17 @@ export default ClassicGameplay = () => {
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
 
+
+  useEffect(() => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 200);
+  }, []);
+
   return loading ? (
     <View>
     <StatusBar style="dark" />
-      <LinearGradient colors={["#FCC54A", "#FECD5E"]}>
+      <LinearGradient colors={["#FCC54A", "#FECD5E"]}>  
         <View style={[styles.container, {justifyContent: "center"}]}>
             <ActivityIndicator size="large" color={"#000"}/>
         </View>
