@@ -18,30 +18,33 @@ export default ClassicGameplay = () => {
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
 
-
   useEffect(() => {
-      setTimeout(() => {
-        setLoading(false);
-      }, 200);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
   }, []);
 
   return loading ? (
     <View>
-    <StatusBar style="dark" />
-      <LinearGradient colors={["#FCC54A", "#FECD5E"]}>  
-        <View style={[styles.container, {justifyContent: "center"}]}>
-            <ActivityIndicator size="large" color={"#000"}/>
+      <StatusBar style="dark" />
+      <LinearGradient colors={["#FCC54A", "#FECD5E"]}>
+        <View style={[styles.container, { justifyContent: "center" }]}>
+          <ActivityIndicator size="large" color={"#000"} />
         </View>
       </LinearGradient>
     </View>
-  ) :
-    (
+  ) : (
     <View>
       <StatusBar style="dark" />
       <LinearGradient colors={["#FCC54A", "#FECD5E"]}>
         <View style={styles.container}>
           <View style={styles.header}>
-            <TouchableOpacity style={styles.backBtn} onPress={()=>{navigation.goBack();}}>
+            <TouchableOpacity
+              style={styles.backBtn}
+              onPress={() => {
+                navigation.goBack();
+              }}
+            >
               <MCIcon
                 name="arrow-left"
                 color="#ffffff"
