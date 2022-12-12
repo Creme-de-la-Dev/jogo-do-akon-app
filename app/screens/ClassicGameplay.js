@@ -2,7 +2,13 @@
 import React, { useState, useEffect } from "react";
 
 // React Native Components
-import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ActivityIndicator,
+  TextInput,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Bars } from "react-native-loader";
@@ -63,7 +69,17 @@ export default ClassicGameplay = () => {
           <Reanimated.View
             style={styles.playerSelection}
             entering={BounceIn.duration(1000)}
-          ></Reanimated.View>
+          >
+            <Text style={styles.title}>Adicione os jogadores:</Text>
+            <TextInput style={styles.input} placeholder="Jogador 1" keyboardType="text" />
+            <TextInput style={styles.input} placeholder="Jogador 2" keyboardType="text" />
+            <TextInput style={styles.input} placeholder="Jogador 3" keyboardType="text" />
+            <TextInput style={styles.input} placeholder="Jogador 4" keyboardType="text" />
+            <TextInput style={styles.input} placeholder="Jogador 5" keyboardType="text" />
+            <TextInput style={styles.input} placeholder="Jogador 6" keyboardType="text" />
+            <TextInput style={styles.input} placeholder="Jogador 7" keyboardType="text" />
+            <TextInput style={styles.input} placeholder="Jogador 8" keyboardType="text" />
+          </Reanimated.View>
           <Reanimated.View entering={SlideInDown.duration(1000)}>
             <TouchableOpacity style={styles.btnStyle}>
               <Text style={styles.btnTitle}>Iniciar Partida</Text>
@@ -77,7 +93,6 @@ export default ClassicGameplay = () => {
 
 const styles = StyleSheet.create({
   container: {
-    // justifyContent: "center",
     height: "100%",
     padding: 8,
   },
@@ -96,6 +111,7 @@ const styles = StyleSheet.create({
   },
 
   playerSelection: {
+    alignItems: "center",
     backgroundColor: "#FF8A00",
     height: "75%",
     marginHorizontal: 10,
@@ -134,5 +150,26 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 18,
     color: "#FF8A00",
+  },
+
+  title: {
+    textAlign: "center",
+    marginTop: 15,
+    marginBottom: 5,
+    fontSize: 20,
+    alignSelf: "center",
+    fontWeight: "bold",
+    color: "#FFF",
+  },
+
+  input: {
+    height: 50,
+    width: "80%",
+    marginVertical: 10,
+    borderWidth: 1,
+    padding: 15,
+    borderRadius: 10,
+    borderColor: "#fbd276",
+    backgroundColor: "#FFF",
   },
 });

@@ -39,7 +39,7 @@ export default LocalMatch = () => {
             source={ClassicMode}
           />
           <Text style={styles.cardText}>
-            De 3 a 10 jogadores, descubra qual de vocês é o verdadeiro Akon e cante como se não houvesse amanhã!
+            De 3 a 8 jogadores, descubra qual de vocês é o verdadeiro Akon e cante como se não houvesse amanhã!
           </Text>
           <Button
             icon={
