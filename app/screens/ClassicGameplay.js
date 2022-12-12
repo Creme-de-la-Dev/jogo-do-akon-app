@@ -14,6 +14,13 @@ import { StatusBar } from "expo-status-bar";
 // Icons
 import MCIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
+// Animations
+import Reanimated, {
+  SlideInUp,
+  BounceIn,
+  SlideInDown,
+} from "react-native-reanimated";
+
 export default ClassicGameplay = () => {
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
@@ -53,9 +60,15 @@ export default ClassicGameplay = () => {
               />
             </TouchableOpacity>
           </View>
-          <View style={styles.playerSelection}>
-
-          </View>
+          <Reanimated.View
+            style={styles.playerSelection}
+            entering={BounceIn.duration(1000)}
+          ></Reanimated.View>
+          <Reanimated.View entering={SlideInDown.duration(1000)}>
+            <TouchableOpacity style={styles.btnStyle}>
+              <Text style={styles.btnTitle}>Iniciar Partida</Text>
+            </TouchableOpacity>
+          </Reanimated.View>
         </View>
       </LinearGradient>
     </View>
@@ -85,7 +98,9 @@ const styles = StyleSheet.create({
   playerSelection: {
     backgroundColor: "#FF8A00",
     height: "75%",
-    margin: 10,
+    marginHorizontal: 10,
+    marginTop: 10,
+    marginBottom: 5,
     borderRadius: "25px",
     shadowColor: "#000",
     shadowOffset: {
@@ -95,5 +110,29 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+  },
+
+  btnStyle: {
+    backgroundColor: "#fff",
+    padding: 20,
+    borderRadius: 25,
+    textAlign: "center",
+    width: "100%",
+    marginTop: 15,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 25.0,
+    elevation: 5,
+  },
+
+  btnTitle: {
+    alignSelf: "center",
+    fontWeight: "bold",
+    fontSize: 18,
+    color: "#FF8A00",
   },
 });
