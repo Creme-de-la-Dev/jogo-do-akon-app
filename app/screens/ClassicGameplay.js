@@ -21,7 +21,7 @@ export default ClassicGameplay = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 800);
   }, []);
 
   return loading ? (
@@ -53,6 +53,9 @@ export default ClassicGameplay = () => {
               />
             </TouchableOpacity>
           </View>
+          <View style={styles.playerSelection}>
+
+          </View>
         </View>
       </LinearGradient>
     </View>
@@ -76,5 +79,21 @@ const styles = StyleSheet.create({
     height: "10%",
     alignSelf: "flex-start",
     justifyContent: "flex-end",
+    marginBottom: 5,
+  },
+
+  playerSelection: {
+    backgroundColor: "#FF8A00",
+    height: "75%",
+    margin: 10,
+    borderRadius: "25px",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
 });
