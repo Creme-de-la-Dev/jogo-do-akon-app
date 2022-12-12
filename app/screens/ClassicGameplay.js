@@ -16,6 +16,7 @@ import { Bars } from "react-native-loader";
 // Expo
 import { LinearGradient } from "expo-linear-gradient";
 import { StatusBar } from "expo-status-bar";
+import { Audio } from 'expo-av';
 
 // Icons
 import MCIcon from "react-native-vector-icons/MaterialCommunityIcons";
@@ -29,7 +30,18 @@ import Reanimated, {
 
 export default ClassicGameplay = () => {
   const [loading, setLoading] = useState(true);
+  const [sound, setSound] = useState();
   const navigation = useNavigation();
+
+  const playSound = async () => {
+    try {
+      console.log("Loading Sound");
+      const { sound } = await Audio.Sound.createAsync( require('../../assets/sounds/akon8bit.mp3'));
+      setSound(sound);
+    } catch (e) {
+      onsole.log("Error playling audio");  
+    }
+  };
 
   useEffect(() => {
     setTimeout(() => {
