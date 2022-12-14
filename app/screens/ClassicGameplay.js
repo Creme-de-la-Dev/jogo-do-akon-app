@@ -11,7 +11,6 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { Bars } from "react-native-loader";
 
 // Expo
 import { LinearGradient } from "expo-linear-gradient";
@@ -35,19 +34,33 @@ export default ClassicGameplay = () => {
 
   const playSound = async () => {
     try {
-      console.log("Loading Sound");
-      const { sound } = await Audio.Sound.createAsync( require('../../assets/sounds/akon8bit.mp3'));
+      console.log("Loading Sound")
+      const { sound } = await Audio.Sound.createAsync(require('../../assets/sounds/akon8bit.mp3'));
       setSound(sound);
+      console.log(sound);
     } catch (e) {
-      onsole.log("Error playling audio");  
+      console.log("Error playling audio");
+    } finally {
+      console.log("Playing Sound");
+      await sound.playAsync();
     }
   };
 
   useEffect(() => {
     setTimeout(() => {
+      playSound();
       setLoading(false);
     }, 800);
-  }, []);
+
+
+    sound
+    ? () => {
+        console.log('Unloading Sound');
+        sound.unloadAsync();
+      }
+    : undefined;
+
+  }, [sound]);
 
   return loading ? (
     <View>
