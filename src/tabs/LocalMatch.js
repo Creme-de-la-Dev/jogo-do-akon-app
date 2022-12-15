@@ -19,7 +19,7 @@ export default LocalMatch = () => {
   const navigation = useNavigation();
 
   const navigateToClassicMatch = () => {
-    navigation.navigate("ClassicGameplay");
+    navigation.navigate("ClassicPlayerSelection");
   }
 
   return (

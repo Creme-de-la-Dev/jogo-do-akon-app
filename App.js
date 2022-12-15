@@ -20,7 +20,7 @@ import LoginScreen from "./app/screens/LoginScreen";
 import Onboarding from "./app/screens/Onboarding";
 import SignInScreen from "./app/screens/SignInScreen";
 import SignUpScreen from "./app/screens/SignUpScreen";
-import ClassicGameplay from "./app/screens/ClassicGameplay";
+import ClassicPlayerSelection from "./app/screens/classicMatch/ClassicPlayerSelection";
 
 export default function App() {
   // Stack Navigation
@@ -127,8 +127,8 @@ export default function App() {
           }}
         />
         <Stack.Screen
-          name="ClassicGameplay"
-          component={ClassicGameplay}
+          name="ClassicPlayerSelection"
+          component={ClassicPlayerSelection}
           options={{
             headerShown: false,
             gestureEnabled: false,

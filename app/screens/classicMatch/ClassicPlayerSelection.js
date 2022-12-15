@@ -15,7 +15,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 // Expo
 import { LinearGradient } from "expo-linear-gradient";
 import { StatusBar } from "expo-status-bar";
-import { Audio } from 'expo-av';
+import { Audio } from "expo-av";
 
 // Icons
 import MCIcon from "react-native-vector-icons/MaterialCommunityIcons";
@@ -27,22 +27,22 @@ import Reanimated, {
   SlideInDown,
 } from "react-native-reanimated";
 
-export default ClassicGameplay = () => {
+export default ClassicPlayerSelection = () => {
   const [loading, setLoading] = useState(true);
   const [sound, setSound] = useState();
   const navigation = useNavigation();
 
   const playSound = async () => {
     try {
-      console.log("Loading Sound")
-      const { sound } = await Audio.Sound.createAsync(require('../../assets/sounds/akon8bit.mp3'));
+      console.log("Loading Sound");
+      const { sound } = await Audio.Sound.createAsync(
+        require("../../../assets/sounds/akon8bit.mp3")
+      );
       setSound(sound);
-      console.log(sound);
-    } catch (e) {
-      console.log("Error playling audio");
-    } finally {
       console.log("Playing Sound");
       await sound.playAsync();
+    } catch (e) {
+      console.log("Error playling audio");
     }
   };
 
@@ -52,14 +52,12 @@ export default ClassicGameplay = () => {
       setLoading(false);
     }, 800);
 
-
     sound
-    ? () => {
-        console.log('Unloading Sound');
-        sound.unloadAsync();
-      }
-    : undefined;
-
+      ? () => {
+          console.log("Unloading Sound");
+          sound.unloadAsync();
+        }
+      : undefined;
   }, [sound]);
 
   return loading ? (
@@ -96,14 +94,46 @@ export default ClassicGameplay = () => {
             entering={BounceIn.duration(1000)}
           >
             <Text style={styles.title}>Adicione os jogadores:</Text>
-            <TextInput style={styles.input} placeholder="Jogador 1" keyboardType="text" />
-            <TextInput style={styles.input} placeholder="Jogador 2" keyboardType="text" />
-            <TextInput style={styles.input} placeholder="Jogador 3" keyboardType="text" />
-            <TextInput style={styles.input} placeholder="Jogador 4" keyboardType="text" />
-            <TextInput style={styles.input} placeholder="Jogador 5" keyboardType="text" />
-            <TextInput style={styles.input} placeholder="Jogador 6" keyboardType="text" />
-            <TextInput style={styles.input} placeholder="Jogador 7" keyboardType="text" />
-            <TextInput style={styles.input} placeholder="Jogador 8" keyboardType="text" />
+            <TextInput
+              style={styles.input}
+              placeholder="Jogador 1"
+              keyboardType="text"
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Jogador 2"
+              keyboardType="text"
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Jogador 3"
+              keyboardType="text"
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Jogador 4"
+              keyboardType="text"
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Jogador 5"
+              keyboardType="text"
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Jogador 6"
+              keyboardType="text"
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Jogador 7"
+              keyboardType="text"
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Jogador 8"
+              keyboardType="text"
+            />
           </Reanimated.View>
           <Reanimated.View entering={SlideInDown.duration(1000)}>
             <TouchableOpacity style={styles.btnStyle}>
