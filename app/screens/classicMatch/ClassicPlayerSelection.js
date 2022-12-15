@@ -58,7 +58,7 @@ export default ClassicPlayerSelection = () => {
           sound.unloadAsync();
         }
       : undefined;
-  }, [sound]);
+  }, []);
 
   return loading ? (
     <View>
