@@ -36,11 +36,13 @@ export default ClassicPlayerSelection = () => {
     try {
       console.log("Loading Sound");
       const { sound } = await Audio.Sound.createAsync(
-        require("../../../assets/sounds/akon8bit.mp3")
+        require("../../../assets/sounds/akon8bit.mp3"),
+        { shouldPlay: true, isLooping: true }
       );
       setSound(sound);
-      console.log("Playing Sound");
+      // await sound.loadAsync();
       await sound.playAsync();
+      console.log("Playing Sound");
     } catch (e) {
       console.log("Error playling audio");
     }
