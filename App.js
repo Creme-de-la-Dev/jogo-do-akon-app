@@ -136,8 +136,8 @@ export default function App() {
           }}
         />
         <Stack.Screen
-          name="ClassicPlayerSelection"
-          component={ClassicPlayerSelection}
+          name="ClassicMatchGameplay"
+          component={ClassicMatchGameplay}
           options={{
             headerShown: false,
             gestureEnabled: false,

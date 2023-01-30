@@ -32,6 +32,10 @@ export default ClassicPlayerSelection = () => {
   const [sound, setSound] = useState();
   const navigation = useNavigation();
 
+  const navigateToGameplay = () => {
+    navigation.navigate(ClassicMatchGameplay);
+  }
+
   const playSound = async () => {
     try {
       console.log("Loading Sound");
@@ -138,7 +142,7 @@ export default ClassicPlayerSelection = () => {
             />
           </Reanimated.View>
           <Reanimated.View entering={SlideInDown.duration(1000)}>
-            <TouchableOpacity style={styles.btnStyle}>
+            <TouchableOpacity style={styles.btnStyle} onPress={() => navigateToGameplay()}>
               <Text style={styles.btnTitle}>Iniciar Partida</Text>
             </TouchableOpacity>
           </Reanimated.View>
