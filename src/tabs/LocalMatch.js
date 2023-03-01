@@ -11,6 +11,7 @@ const ClassicMode = require("../../assets/classicMode.jpeg");
 const CoopMode = require("../../assets/coopMode.png");
 const VersusMode = require("../../assets/versus.png");
 const BattleRoyale = require("../../assets/battleRoyale.png");
+const AkonCalypse = require("../../assets/akoncalypse.jpeg");
 
 // Icons
 import MCIcon from "react-native-vector-icons/MaterialCommunityIcons";
@@ -136,6 +137,39 @@ export default LocalMatch = () => {
           <Text style={styles.cardText}>
             De 20 a 100 jogadores, seja o último a sobreviver ou seja o Akon que
             ganhe de todo mundo!
+          </Text>
+          <Button
+            icon={
+              <MCIcon
+                name="lock"
+                color="#ffffff"
+                iconStyle={{ marginRight: 10 }}
+                size={28}
+              />
+            }
+            buttonStyle={[styles.cardButton, { backgroundColor: "#939385" }]}
+            title="Adiquira a versão PRO"
+            titleStyle={{ fontWeight: "bold", marginLeft: 10 }}
+          />
+        </Card>
+        <Card
+          containerStyle={{
+            borderRadius: 10,
+            borderColor: "#fbd276",
+            borderWidth: 2,
+            marginBottom: 20,
+          }}
+        >
+          <Card.Title style={styles.cardTitle}>AkonCalypse</Card.Title>
+          <Card.Divider />
+          <Card.Image
+            style={{ padding: 0, borderRadius: 10 }}
+            source={AkonCalypse}
+          />
+          <Text style={styles.cardText}>
+            Reuna todas as pessoas de no mínimo 5 bairros de seu estado e escolha apenas um desses para ser o Akon.
+            O Akon deve eliminar o máximo de pessoas em um período de 14 dias e não pode ser detido por ninguém.
+            Este modo faz muito sucesso em chácaras!
           </Text>
           <Button
             icon={
