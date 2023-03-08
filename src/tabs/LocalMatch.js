@@ -125,7 +125,6 @@ export default LocalMatch = () => {
             borderRadius: 10,
             borderColor: "#fbd276",
             borderWidth: 2,
-            marginBottom: 20,
           }}
         >
           <Card.Title style={styles.cardTitle}>Battle Royale</Card.Title>
