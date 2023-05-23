@@ -46,11 +46,17 @@ export default ClassicPlayerSelection = () => {
       setSound(sound);
       // await sound.loadAsync();
       await sound.playAsync();
+      await Audio.setAudioModeAsync({
+        allowsRecordingIOS: false,
+      
+      });
       console.log("Playing Sound");
     } catch (e) {
       console.log("Error playling audio");
     }
   };
+
+  
 
   useEffect(() => {
     setTimeout(() => {
@@ -178,7 +184,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginTop: 10,
     marginBottom: 5,
-    borderRadius: "25px",
+    borderRadius: 25,
     // shadowColor: "#000",
     // shadowOffset: {
     //   width: 0,
@@ -196,14 +202,14 @@ const styles = StyleSheet.create({
     textAlign: "center",
     width: "100%",
     marginTop: 15,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 0,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 25.0,
-    elevation: 5,
+    // shadowColor: "#000",
+    // shadowOffset: {
+    //   width: 0,
+    //   height: 0,
+    // },
+    // shadowOpacity: 0.25,
+    // shadowRadius: 25.0,
+    // elevation: 5,
   },
 
   btnTitle: {
