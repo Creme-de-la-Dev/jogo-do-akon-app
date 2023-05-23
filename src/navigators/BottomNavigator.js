@@ -30,7 +30,7 @@ const BottomNavigator = ({ route, navigation }) => {
         // tabBarInactiveTintColor: theme.inactiveTintColor,
         tabBarIndicatorStyle: { width: 0, height: 0, elevation: 0 },
         headerStyle: {
-          shadowOffset: { height: 0, width: 0 },
+          // shadowOffset: { height: 0, width: 0 },
           backgroundColor: "#fbd276",
         },
         headerTintColor: "#000000",
@@ -52,7 +52,7 @@ const BottomNavigator = ({ route, navigation }) => {
         tabBarStyle: [
           {
             display: "flex",
-            borderTopWidth: "#fbd276",
+            // borderTopWidth: "#fbd276",
           },
           null,
         ],

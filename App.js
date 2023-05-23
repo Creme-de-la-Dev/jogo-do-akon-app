@@ -110,7 +110,7 @@ export default function App() {
             animationEnabled: true,
             headerStyle: {
               backgroundColor: "#fbd276",
-              shadowOffset: { height: 0, width: 0 },
+              // shadowOffset: { height: 0, width: 0 },
             },
           }}
         />

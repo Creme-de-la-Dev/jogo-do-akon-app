@@ -168,7 +168,6 @@ export default LocalMatch = () => {
           <Text style={styles.cardText}>
             Reuna todas as pessoas de no mínimo 5 bairros de seu estado e escolha apenas um desses para ser o Akon.
             O Akon deve eliminar o máximo de pessoas em um período de 14 dias e não pode ser detido por ninguém.
-            Este modo faz muito sucesso em chácaras!
           </Text>
           <Button
             icon={

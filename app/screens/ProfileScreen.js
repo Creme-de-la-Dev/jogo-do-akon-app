@@ -89,8 +89,8 @@ const styles = StyleSheet.create({
     height: "58%",
     width: "100%",
     backgroundColor: "#f9dfa2",
-    borderBottomLeftRadius: "300px",
-    borderBottomRightRadius: "300px",
+    // borderBottomLeftRadius: "300px",
+    // borderBottomRightRadius: "300px",
     padding: 10,
     alignItems: "center",
   },
@@ -148,12 +148,12 @@ const styles = StyleSheet.create({
   },
 
   userStatsText: {
-    fontSize: "20px",
+    fontSize: 20,
     marginLeft: 5,
   },
 
   userStatsNumber: {
-    fontSize: "20px",
+    fontSize: 20,
     fontWeight: "bold",
   },
 
