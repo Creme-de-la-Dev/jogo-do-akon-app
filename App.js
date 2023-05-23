@@ -20,6 +20,8 @@ import LoginScreen from "./app/screens/LoginScreen";
 import Onboarding from "./app/screens/Onboarding";
 import SignInScreen from "./app/screens/SignInScreen";
 import SignUpScreen from "./app/screens/SignUpScreen";
+import ClassicPlayerSelection from "./app/screens/classicMatch/ClassicPlayerSelection";
+import ClassicMatchGameplay from "./app/screens/classicMatch/ClassicMatchGameplay";
 
 export default function App() {
   // Stack Navigation
@@ -108,7 +110,7 @@ export default function App() {
             animationEnabled: true,
             headerStyle: {
               backgroundColor: "#fbd276",
-              shadowOffset: { height: 0, width: 0 },
+              // shadowOffset: { height: 0, width: 0 },
             },
           }}
         />
@@ -123,6 +125,22 @@ export default function App() {
             headerStyle: {
               backgroundColor: "#fbd276",
             },
+          }}
+        />
+        <Stack.Screen
+          name="ClassicPlayerSelection"
+          component={ClassicPlayerSelection}
+          options={{
+            headerShown: false,
+            gestureEnabled: false,
+          }}
+        />
+        <Stack.Screen
+          name="ClassicMatchGameplay"
+          component={ClassicMatchGameplay}
+          options={{
+            headerShown: false,
+            gestureEnabled: false,
           }}
         />
       </Stack.Navigator>

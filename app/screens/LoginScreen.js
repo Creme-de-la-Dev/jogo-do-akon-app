@@ -80,8 +80,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
     color: "#3E3B3B",
-    fontSize: "55px",
-    lineHeight: "80%",
+    fontSize: 55,
+    // lineHeight: "80%",
   },
 
   akonLogo: {
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   },
 
   btnView: {
-    alignItems: "space-evenly",
+    // alignItems: "space-evenly",
   },
 
   btnStyle: {
@@ -104,14 +104,14 @@ const styles = StyleSheet.create({
     textAlign: "center",
     width: "100%",
     marginTop: 20,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 0,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 25.0,
-    elevation: 5,
+    // shadowColor: "#000",
+    // shadowOffset: {
+    //   width: 0,
+    //   height: 0,
+    // },
+    // shadowOpacity: 0.25,
+    // shadowRadius: 25.0,
+    // elevation: 5,
   },
 
   btnTitle: {

@@ -4,17 +4,25 @@ import React, { useContext } from "react";
 // React Native Components
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { Card, Button, Icon } from "@rneui/themed";
+import { useNavigation } from "@react-navigation/native";
 
 // Images
 const ClassicMode = require("../../assets/classicMode.jpeg");
 const CoopMode = require("../../assets/coopMode.png");
 const VersusMode = require("../../assets/versus.png");
 const BattleRoyale = require("../../assets/battleRoyale.png");
+const AkonCalypse = require("../../assets/akoncalypse.jpeg");
 
 // Icons
 import MCIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
 export default LocalMatch = () => {
+  const navigation = useNavigation();
+
+  const navigateToClassicMatch = () => {
+    navigation.navigate("ClassicPlayerSelection");
+  };
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.mainSection}>
@@ -32,7 +40,8 @@ export default LocalMatch = () => {
             source={ClassicMode}
           />
           <Text style={styles.cardText}>
-            De 3 a 10 jogadores, descubra qual de vocês é o verdadeiro Akon e cante como se não houvesse amanhã!
+            De 3 a 8 jogadores, descubra qual de vocês é o verdadeiro Akon e
+            cante como se não houvesse amanhã!
           </Text>
           <Button
             icon={
@@ -45,7 +54,8 @@ export default LocalMatch = () => {
             }
             buttonStyle={styles.cardButton}
             title="Jogar"
-            titleStyle={{ fontWeight: "bold", marginLeft: 10, }}
+            titleStyle={{ fontWeight: "bold", marginLeft: 10 }}
+            onPress={() => navigateToClassicMatch()}
           />
         </Card>
         <Card
@@ -62,7 +72,8 @@ export default LocalMatch = () => {
             source={CoopMode}
           />
           <Text style={styles.cardText}>
-            Junte-se em duplas e descubra qual dupla é o Akon e o Sean Kingston antes que seja tarde demais!
+            Junte-se em duplas e descubra qual dupla é o Akon e o Sean Kingston
+            antes que seja tarde demais!
           </Text>
           <Button
             icon={
@@ -75,7 +86,7 @@ export default LocalMatch = () => {
             }
             buttonStyle={styles.cardButton}
             title="Jogar"
-            titleStyle={{ fontWeight: "bold", marginLeft: 10, }}
+            titleStyle={{ fontWeight: "bold", marginLeft: 10 }}
           />
         </Card>
         <Card
@@ -92,7 +103,8 @@ export default LocalMatch = () => {
             source={VersusMode}
           />
           <Text style={styles.cardText}>
-            Akon vs Fifty, quem será o vencedor? Quem fizer mais vítimas até o fim da partida será vitorioso!
+            Akon vs Fifty, quem será o vencedor? Quem fizer mais vítimas até o
+            fim da partida será vitorioso!
           </Text>
           <Button
             icon={
@@ -103,9 +115,40 @@ export default LocalMatch = () => {
                 size={28}
               />
             }
-            buttonStyle={[styles.cardButton, {backgroundColor: "#939385"}]}
+            buttonStyle={[styles.cardButton, { backgroundColor: "#939385" }]}
             title="Adiquira a versão PRO"
-            titleStyle={{ fontWeight: "bold", marginLeft: 10, }}
+            titleStyle={{ fontWeight: "bold", marginLeft: 10 }}
+          />
+        </Card>
+        <Card
+          containerStyle={{
+            borderRadius: 10,
+            borderColor: "#fbd276",
+            borderWidth: 2,
+          }}
+        >
+          <Card.Title style={styles.cardTitle}>Battle Royale</Card.Title>
+          <Card.Divider />
+          <Card.Image
+            style={{ padding: 0, borderRadius: 10 }}
+            source={BattleRoyale}
+          />
+          <Text style={styles.cardText}>
+            De 20 a 100 jogadores, seja o último a sobreviver ou seja o Akon que
+            ganhe de todo mundo!
+          </Text>
+          <Button
+            icon={
+              <MCIcon
+                name="lock"
+                color="#ffffff"
+                iconStyle={{ marginRight: 10 }}
+                size={28}
+              />
+            }
+            buttonStyle={[styles.cardButton, { backgroundColor: "#939385" }]}
+            title="Adiquira a versão PRO"
+            titleStyle={{ fontWeight: "bold", marginLeft: 10 }}
           />
         </Card>
         <Card
@@ -116,14 +159,15 @@ export default LocalMatch = () => {
             marginBottom: 20,
           }}
         >
-          <Card.Title style={styles.cardTitle}>Battle Royale</Card.Title>
+          <Card.Title style={styles.cardTitle}>AkonCalypse</Card.Title>
           <Card.Divider />
           <Card.Image
             style={{ padding: 0, borderRadius: 10 }}
-            source={BattleRoyale}
+            source={AkonCalypse}
           />
           <Text style={styles.cardText}>
-            De 20 a 100 jogadores, seja o último a sobreviver ou seja o Akon que ganhe de todo mundo!
+            Reuna todas as pessoas de no mínimo 5 bairros de seu estado e escolha apenas um desses para ser o Akon.
+            O Akon deve eliminar o máximo de pessoas em um período de 14 dias e não pode ser detido por ninguém.
           </Text>
           <Button
             icon={
@@ -134,9 +178,9 @@ export default LocalMatch = () => {
                 size={28}
               />
             }
-            buttonStyle={[styles.cardButton, {backgroundColor: "#939385"}]}
+            buttonStyle={[styles.cardButton, { backgroundColor: "#939385" }]}
             title="Adiquira a versão PRO"
-            titleStyle={{ fontWeight: "bold", marginLeft: 10, }}
+            titleStyle={{ fontWeight: "bold", marginLeft: 10 }}
           />
         </Card>
       </View>
