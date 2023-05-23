@@ -48,15 +48,12 @@ export default ClassicPlayerSelection = () => {
       await sound.playAsync();
       await Audio.setAudioModeAsync({
         allowsRecordingIOS: false,
-      
       });
       console.log("Playing Sound");
     } catch (e) {
       console.log("Error playling audio");
     }
   };
-
-  
 
   useEffect(() => {
     setTimeout(() => {
