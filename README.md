@@ -51,7 +51,7 @@ Para executar o projeto Jogo do Akon na sua máquina local, siga estes passos:
 1. **Clone o repositório:**
 
     ```sh
-    git clone https://github.com/seuusuario/jogo-do-akon.git
+    git clone https://github.com/Creme-de-la-Dev/jogo-do-akon.git
     ```
 
 2. **Navegue até o diretório do projeto:**
